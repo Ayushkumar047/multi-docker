@@ -10,17 +10,10 @@ after_success:
  - docker build -t ayushkumar047/multi-nginx ./nginx
  - docker build -t ayushkumar047/multi-server ./server
  - docker build -t ayushkumar047/multi-worker ./worker
-<<<<<<< HEAD
- # log in docker hub
- - echo "DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
- # push image to docker hub
-=======
 # log in docker hub
  - echo "DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # push image to docker hub
->>>>>>> 62a98e7df2e61671dafda19a9e0a85eb5ffa90bc
  - docker push ayushkumar047/multi-client
  - docker push ayushkumar047/multi-nginx
  - docker push ayushkumar047/multi-server
  - docker push ayushkumar047/multi-worker
-
